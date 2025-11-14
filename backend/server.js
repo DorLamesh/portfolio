@@ -20,7 +20,7 @@ const portfolioData = {
     description: "I create beautiful, functional, and user-centered digital experiences that solve real problems and bring ideas to life."
   },
   about: {
-    description: "I'm a passionate full-stack developer with 3+ years of experience crafting digital solutions that make a difference. I specialize in creating seamless user experiences through clean code, intuitive design, and innovative thinking. When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.",
+    description: "I'm a passionate DevOps engineer and backend developer with 3+ years of experience crafting digital solutions that make a difference. I specialize in creating seamless user experiences through clean code, intuitive design, and innovative thinking. When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community.",
     stats: [
       { number: "30+", label: "Projects Completed" },
       { number: "3+", label: "Years Experience" }
@@ -31,24 +31,12 @@ const portfolioData = {
       position: "DevOps Engineer",
       company: "Inuitive",
       duration: "2022 - Present",
-      location: "Tel-Aviv, Israel",
+      location: "Ra'anana, Israel",
       description: "Lead development of enterprise web applications serving 100k+ users. Architected microservices infrastructure and implemented CI/CD pipelines.",
       achievements: [
         "Improved application performance by 40% through code optimization",
         "Led a team of 5 developers in agile environment",
         "Implemented automated testing reducing bugs by 60%"
-      ]
-    },
-    {
-      position: "Frontend Developer",
-      company: "WebDev Agency",
-      duration: "2018 - 2019",
-      location: "Chicago, IL",
-      description: "Created responsive websites and web applications for various clients. Focused on user experience and modern web standards.",
-      achievements: [
-        "Delivered 20+ client projects on time and within budget",
-        "Improved website loading speeds by 50%",
-        "Implemented accessibility standards (WCAG 2.1)"
       ]
     }
   ],
@@ -75,18 +63,11 @@ const portfolioData = {
   },
   projects: [
     {
-      name: "E-Commerce Platform",
-      description: "A modern, full-stack e-commerce solution featuring seamless payment integration, real-time inventory management, and an intuitive admin dashboard. Built with performance and scalability in mind.",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe API", "AWS"],
-      github: "https://github.com/dorlamesh/ecommerce-platform",
-      live: "https://ecommerce-demo.dorlamesh.dev"
-    },
-    {
-      name: "TaskFlow - Project Management",
-      description: "A collaborative project management tool with real-time updates, team collaboration features, and advanced project tracking capabilities. Designed for modern remote teams.",
-      technologies: ["React", "Socket.io", "MongoDB", "Express.js", "JWT"],
-      github: "https://github.com/dorlamesh/taskflow",
-      live: "https://taskflow.dorlamesh.dev"
+      name: "Portfolio Website",
+      description: "A responsive, modern portfolio website showcasing my work and skills. Built with React and styled with custom CSS animations and smooth scrolling effects.",
+      technologies: ["React", "CSS3", "JavaScript", "Responsive Design"],
+      github: "https://github.com/dorlamesh/portfolio",
+      live: "https://dorlamesh.dev"
     },
     {
       name: "WeatherVue Dashboard",
@@ -94,13 +75,6 @@ const portfolioData = {
       technologies: ["Vue.js", "Chart.js", "Weather API", "PWA", "Service Workers"],
       github: "https://github.com/dorlamesh/weathervue",
       live: "https://weathervue.dorlamesh.dev"
-    },
-    {
-      name: "Portfolio Website",
-      description: "A responsive, modern portfolio website showcasing my work and skills. Built with React and styled with custom CSS animations and smooth scrolling effects.",
-      technologies: ["React", "CSS3", "JavaScript", "Responsive Design"],
-      github: "https://github.com/dorlamesh/portfolio",
-      live: "https://dorlamesh.dev"
     }
   ],
   contact: {
