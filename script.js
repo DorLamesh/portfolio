@@ -6,8 +6,12 @@ const toggle = document.getElementById('themeToggle');
 const saved = localStorage.getItem('theme');
 if (saved) html.setAttribute('data-theme', saved);
 
+const themeOrder = ['dark', 'grey', 'light'];
+
 toggle.addEventListener('click', () => {
-  const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  const current = html.getAttribute('data-theme') || 'dark';
+  const idx = themeOrder.indexOf(current);
+  const next = themeOrder[(idx + 1) % themeOrder.length];
   html.setAttribute('data-theme', next);
   localStorage.setItem('theme', next);
 });

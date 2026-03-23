@@ -19,6 +19,22 @@
   --btn-hover:    #222;
 }
 
+[data-theme="grey"] {
+  --bg:           #1c1c1e;
+  --bg-subtle:    #2c2c2e;
+  --border:       #3a3a3c;
+  --text:         #e5e5ea;
+  --text-2:       #8e8e93;
+  --text-3:       #636366;
+  --link:         #e5e5ea;
+  --link-hover:   #fff;
+  --tag-bg:       #2c2c2e;
+  --tag-text:     #8e8e93;
+  --nav-bg:       rgba(28,28,30,0.85);
+  --btn-bg:       #2c2c2e;
+  --btn-hover:    #3a3a3c;
+}
+
 [data-theme="light"] {
   --bg:           #fafafa;
   --bg-subtle:    #f2f2f2;
@@ -143,8 +159,13 @@ a {
 .theme-btn:hover { color: var(--text); background: var(--btn-bg); }
 
 [data-theme="dark"]  .icon-moon { display: none; }
+[data-theme="dark"]  .icon-half { display: none; }
 [data-theme="dark"]  .icon-sun  { display: block; }
+[data-theme="grey"]  .icon-sun  { display: none; }
+[data-theme="grey"]  .icon-moon { display: none; }
+[data-theme="grey"]  .icon-half { display: block; }
 [data-theme="light"] .icon-sun  { display: none; }
+[data-theme="light"] .icon-half { display: none; }
 [data-theme="light"] .icon-moon { display: block; }
 
 /* ─── MAIN ───────────────────────────────────────────────────────── */
