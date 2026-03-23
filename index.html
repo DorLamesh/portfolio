@@ -45,18 +45,21 @@
     <!-- INTRO -->
     <section class="intro">
       <p class="intro-text">
-        I'm a DevOps &amp; systems engineer based in Tel-Aviv, currently at
-        <a href="https://www.inuitive.com" target="_blank" rel="noopener">Inuitive</a>,
-        building the infrastructure behind computer vision chips.
+        I'm a DevOps engineer based in Tel-Aviv, currently at
+        <a href="https://www.inuitive.com" target="_blank" rel="noopener">Inuitive</a>
+        (Ra'anana), building CI/CD pipelines and developer tooling for teams that ship
+        computer vision chips.
       </p>
       <p class="intro-text">
-        I care less about what a system does and more about why it breaks —
-        and what that tells you about the people who built it.
-        Most infrastructure problems are team problems in disguise.
+        My work sits at the intersection of build systems, cloud infrastructure, and
+        automation — from migrating legacy SCM to Git and rebuilding C/C++ packaging
+        with Conan, to running Jenkins pipelines and designing DevEx tools that get
+        out of engineers' way.
       </p>
       <p class="intro-text">
-        I write here about systems thinking, engineering culture, and the ideas
-        that stay with me long after the project ends.
+        Before DevOps I spent five years as a Company Commander in the IDF — managing
+        people, logistics, and 2M ILS budgets. That experience shapes how I think about
+        systems: reliability is a people problem before it's a technical one.
       </p>
     </section>
 
@@ -68,40 +71,19 @@
 
         <div class="entry">
           <div class="entry-meta">
-            <span class="entry-year">2024</span>
-            <span class="entry-tag">Open source</span>
+            <span class="entry-year">2022</span>
+            <span class="entry-tag">Migration</span>
           </div>
           <div class="entry-body">
-            <h3 class="entry-title">
-              <a href="https://github.com/dorlamesh" target="_blank" rel="noopener">k8s-autoscaler-config ↗</a>
-            </h3>
+            <h3 class="entry-title">SVN → Git migration at Inuitive</h3>
             <p class="entry-desc">
-              A zero-boilerplate Helm chart generator for Kubernetes HPA and KEDA-based autoscaling.
-              Born out of repetitive YAML across four services — now a single config file drives all
-              of them. Used internally at Inuitive.
+              Led the full SCM migration from SVN to Git across the org — preserving history,
+              handling large binary assets with Git LFS, and splitting monolithic repositories
+              into subdirectories. Wrote the internal migration guide that got the whole team
+              across with minimal disruption.
             </p>
             <div class="entry-stack">
-              <span>Kubernetes</span><span>Helm</span><span>KEDA</span><span>Go</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="entry">
-          <div class="entry-meta">
-            <span class="entry-year">2024</span>
-            <span class="entry-tag">Tool</span>
-          </div>
-          <div class="entry-body">
-            <h3 class="entry-title">
-              <a href="https://github.com/dorlamesh" target="_blank" rel="noopener">infra-drift-detector ↗</a>
-            </h3>
-            <p class="entry-desc">
-              Detects configuration drift between Terraform state and live cloud resources.
-              Outputs a structured diff to Slack on a schedule, before anyone notices the
-              production environment diverged from what's in the repo.
-            </p>
-            <div class="entry-stack">
-              <span>Terraform</span><span>AWS</span><span>Python</span><span>Slack API</span>
+              <span>Git</span><span>git-filter-repo</span><span>Git LFS</span><span>SVN</span>
             </div>
           </div>
         </div>
@@ -109,19 +91,17 @@
         <div class="entry">
           <div class="entry-meta">
             <span class="entry-year">2023</span>
-            <span class="entry-tag">Side project</span>
+            <span class="entry-tag">Build systems</span>
           </div>
           <div class="entry-body">
-            <h3 class="entry-title">
-              <a href="https://github.com/dorlamesh" target="_blank" rel="noopener">WeatherVue — Offline-First PWA ↗</a>
-            </h3>
+            <h3 class="entry-title">Build system overhaul — CMake + Conan</h3>
             <p class="entry-desc">
-              Most apps are designed for the happy path. I built this for the airport.
-              A PWA that treats network access as an optional luxury, not a requirement.
-              An exercise in designing for constraints.
+              Migrated Visual Studio solutions and Ninja builds to CMake, and introduced
+              Conan as the C/C++ package manager. The result: reproducible builds, consistent
+              dependency versions across machines, and a packaging workflow that scales.
             </p>
             <div class="entry-stack">
-              <span>Vue.js</span><span>PWA</span><span>Service Workers</span>
+              <span>CMake</span><span>Conan</span><span>C/C++</span><span>Ninja</span><span>Visual Studio</span>
             </div>
           </div>
         </div>
@@ -129,19 +109,37 @@
         <div class="entry">
           <div class="entry-meta">
             <span class="entry-year">2023</span>
-            <span class="entry-tag">Tool</span>
+            <span class="entry-tag">CI/CD</span>
           </div>
           <div class="entry-body">
-            <h3 class="entry-title">
-              <a href="https://github.com/dorlamesh" target="_blank" rel="noopener">pipeline-viz ↗</a>
-            </h3>
+            <h3 class="entry-title">Jenkins CI pipeline + JFrog Artifactory</h3>
             <p class="entry-desc">
-              A lightweight CLI that parses Jenkins and GitHub Actions pipelines and renders
-              an ASCII dependency graph. Useful for onboarding engineers who need to understand
-              a build system in the first 30 minutes, not the first three weeks.
+              Built and maintained the Continuous Integration pipeline used in production at
+              Inuitive — from source commit to artifact. Integrated JFrog Artifactory as the
+              artifact repository, streamlining the build, test, and deployment flow for
+              hardware-adjacent software.
             </p>
             <div class="entry-stack">
-              <span>Python</span><span>Jenkins</span><span>GitHub Actions</span>
+              <span>Jenkins</span><span>JFrog Artifactory</span><span>Bash</span><span>Python</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-meta">
+            <span class="entry-year">2024</span>
+            <span class="entry-tag">DevEx</span>
+          </div>
+          <div class="entry-body">
+            <h3 class="entry-title">Internal DevEx tooling + Debian PPA on AWS</h3>
+            <p class="entry-desc">
+              Designed and shipped Python-based developer experience tools with lightweight
+              UIs and REST APIs, cutting manual steps for the engineering team. Also created
+              and deployed a Debian PPA repository on AWS to distribute internal packages
+              cleanly across environments.
+            </p>
+            <div class="entry-stack">
+              <span>Python</span><span>AWS S3</span><span>AWS EC2</span><span>Debian</span><span>REST API</span>
             </div>
           </div>
         </div>
@@ -229,29 +227,31 @@
 
       <div class="about-text">
         <p>
-          I've been doing infrastructure work for about six years. Before DevOps I studied
-          computer science and built things on the side — the usual path. What changed is
-          that I stopped finding the code interesting and started finding the system interesting:
-          who runs it, why it's shaped the way it is, what it would look like if you started over.
+          I came to DevOps through the army. Five years as a Company Commander in the IDF —
+          managing people, coordinating logistics, running budgets — taught me that the hardest
+          part of any system is the human layer. I brought that lens into engineering when I
+          joined <a href="https://www.inuitive.com" target="_blank" rel="noopener">Inuitive</a>
+          in 2022.
         </p>
         <p>
-          At <a href="https://www.inuitive.com" target="_blank" rel="noopener">Inuitive</a>
-          I work on the pipeline that takes code from commit to silicon. It's slow, it's
-          capital-intensive, and the cost of a mistake is measured in weeks, not deploys.
-          That environment has taught me more about reliability than any book.
+          At Inuitive I work on the pipeline that takes code from commit to silicon. Build
+          systems, CI/CD, packaging, developer tooling — the infrastructure that lets
+          chip engineers ship without friction. In parallel I'm completing a BSc in Computer
+          Science at the Open University of Israel.
         </p>
         <p>
-          I believe in small teams, direct feedback, and writing down your reasoning —
-          not just your conclusions. I'm always up for a conversation about systems,
-          teams, or anything that makes you think differently.
+          My tech comfort zone: Jenkins, Python, Bash, Docker, Kubernetes, Terraform, and AWS.
+          I hold the AWS Certified Cloud Practitioner (CLF-C02) and I'm comfortable across
+          Linux, Windows, and macOS. I believe in automation that explains itself and tooling
+          that gets out of the way.
         </p>
 
         <div class="about-now">
           <h3 class="about-now-title">Now</h3>
           <ul class="now-list">
-            <li>Thinking about platform engineering and what developer experience really means at 3am on-call</li>
-            <li>Trying to write one sharp piece a month instead of ten loose ones</li>
-            <li>Reading <em>The Goal</em> by Goldratt — different book every time</li>
+            <li>Studying for AWS Solutions Architect Associate (SAA-C03)</li>
+            <li>Taking the <em>Nir Geier DevOps course</em> to sharpen the gaps</li>
+            <li>Exploring AI workflows with Claude Code — agents, skills, and practical automation</li>
           </ul>
         </div>
       </div>
