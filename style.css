@@ -175,6 +175,27 @@ a {
   padding: 0 24px;
 }
 
+/* ─── PAGE SWITCHING ─────────────────────────────────────────────── */
+#home,
+#projects,
+#writing,
+#about {
+  display: none;
+}
+
+#home.active,
+#projects.active,
+#writing.active,
+#about.active {
+  display: block;
+  animation: pageFadeIn 0.22s ease forwards;
+}
+
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 /* ─── INTRO ──────────────────────────────────────────────────────── */
 .intro {
   padding: 56px 0 48px;
