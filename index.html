@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dor Lamesh — systems thinker, DevOps engineer, builder. Notes on how I think, what I build, and why.">
+  <title>Dor Lamesh</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23000'/><text y='.9em' font-size='62' font-family='-apple-system' font-weight='700' fill='%23fff' x='50%' text-anchor='middle'>DL</text></svg>">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">DL</a>
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#thinking">Thinking</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="mailto:dor.lamesh@gmail.com" class="nav-cta">Say hi</a></li>
+      </ul>
+      <button class="nav-menu-btn" id="menuBtn" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#work" class="mobile-link">Work</a>
+    <a href="#thinking" class="mobile-link">Thinking</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="mailto:dor.lamesh@gmail.com" class="mobile-link mobile-link--cta">Say hi</a>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero-eyebrow">
+          <span class="status-dot"></span>
+          <span>Open to interesting problems</span>
+        </div>
+        <h1 class="hero-title">
+          I build systems<br>
+          <span class="hero-title--dim">that earn their complexity.</span>
+        </h1>
+        <p class="hero-sub">
+          DevOps &amp; systems engineer based in Tel-Aviv. I care more about why a system fails than the fact that it does — and I write about that.
+        </p>
+        <div class="hero-actions">
+          <a href="#work" class="btn btn--primary">See my work</a>
+          <a href="#thinking" class="btn btn--ghost">Read my thinking</a>
+        </div>
+      </div>
+      <div class="hero-scroll-hint">
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- SELECTED WORK -->
+    <section class="section" id="work">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-label">Selected Work</span>
+          <h2 class="section-title">Projects with a story behind them</h2>
+          <p class="section-desc">Not what I built, but why, and what I learned from it.</p>
+        </header>
+
+        <div class="projects-grid">
+
+          <article class="project-card project-card--featured">
+            <div class="project-card-top">
+              <span class="project-tag">Infrastructure</span>
+              <span class="project-year">2023</span>
+            </div>
+            <h3 class="project-title">The 40% That Wasn't Code</h3>
+            <p class="project-insight">
+              "We assumed it was the queries. It wasn't the queries."
+            </p>
+            <p class="project-desc">
+              A performance investigation that forced me to look beyond the obvious.
+              Rebuilding the CI/CD pipeline at Inuitive revealed that most latency
+              wasn't in the system — it was in the handoffs between people. This is
+              the story of how reframing a technical problem as an organizational one
+              unlocked a 40% performance gain.
+            </p>
+            <div class="project-meta">
+              <div class="project-stack">
+                <span>Docker</span><span>Kubernetes</span><span>Jenkins</span>
+              </div>
+              <a href="#" class="project-link">
+                Read the breakdown
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card-top">
+              <span class="project-tag">Platform</span>
+              <span class="project-year">2022</span>
+            </div>
+            <h3 class="project-title">Debugging in Production</h3>
+            <p class="project-insight">
+              "Observability isn't dashboards. It's having the right questions before incidents happen."
+            </p>
+            <p class="project-desc">
+              Rebuilt the monitoring layer for a camera chip pipeline — not by adding
+              more metrics, but by removing the ones that created false confidence.
+              Led to a 60% reduction in critical bugs reaching production.
+            </p>
+            <div class="project-meta">
+              <div class="project-stack">
+                <span>AWS</span><span>Prometheus</span><span>Python</span>
+              </div>
+              <a href="#" class="project-link">
+                Case study
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card-top">
+              <span class="project-tag">Side project</span>
+              <span class="project-year">2024</span>
+            </div>
+            <h3 class="project-title">WeatherVue — Design for Offline First</h3>
+            <p class="project-insight">
+              "Most apps are designed for the happy path. I built this for the airport."
+            </p>
+            <p class="project-desc">
+              A progressive web app that treats network access as an optional luxury,
+              not a requirement. An exercise in designing for constraints — and a
+              reminder that limitations make better software.
+            </p>
+            <div class="project-meta">
+              <div class="project-stack">
+                <span>Vue.js</span><span>PWA</span><span>Service Workers</span>
+              </div>
+              <a href="https://github.com/dorlamesh" class="project-link" target="_blank" rel="noopener">
+                View on GitHub
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- THINKING / WRITING -->
+    <section class="section section--alt" id="thinking">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-label">Thinking</span>
+          <h2 class="section-title">Notes from the work</h2>
+          <p class="section-desc">Things I keep thinking about long after the project ends.</p>
+        </header>
+
+        <div class="writing-grid">
+
+          <article class="writing-card writing-card--large">
+            <span class="writing-tag">Systems</span>
+            <h3 class="writing-title">Why I stopped measuring developer productivity</h3>
+            <p class="writing-desc">
+              Velocity points, commit counts, PR throughput — I tracked all of it.
+              Then I noticed the team with the best metrics was the most miserable,
+              and the best team had the worst numbers. Here's what I measure now.
+            </p>
+            <div class="writing-footer">
+              <span class="writing-read-time">8 min read</span>
+              <a href="#" class="writing-link">Read</a>
+            </div>
+          </article>
+
+          <article class="writing-card">
+            <span class="writing-tag">Infrastructure</span>
+            <h3 class="writing-title">Write infrastructure that explains itself</h3>
+            <p class="writing-desc">
+              Good documentation is a failure mode. What if the system's behavior was the documentation?
+            </p>
+            <div class="writing-footer">
+              <span class="writing-read-time">5 min read</span>
+              <a href="#" class="writing-link">Read</a>
+            </div>
+          </article>
+
+          <article class="writing-card">
+            <span class="writing-tag">Philosophy</span>
+            <h3 class="writing-title">The Unix philosophy, and why I still care</h3>
+            <p class="writing-desc">
+              Every few years someone declares "Unix is dead." Every time, they're wrong.
+              Here's why one idea from 1978 still shapes how I design everything.
+            </p>
+            <div class="writing-footer">
+              <span class="writing-read-time">6 min read</span>
+              <a href="#" class="writing-link">Read</a>
+            </div>
+          </article>
+
+          <article class="writing-card">
+            <span class="writing-tag">Process</span>
+            <h3 class="writing-title">Building with constraints as the feature</h3>
+            <p class="writing-desc">
+              The best systems I've built had strict limitations — time, budget, team size.
+              I've started deliberately introducing constraints on projects that don't have them.
+            </p>
+            <div class="writing-footer">
+              <span class="writing-read-time">4 min read</span>
+              <a href="#" class="writing-link">Read</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- NOW -->
+    <section class="section" id="now">
+      <div class="container">
+        <div class="now-card">
+          <div class="now-card-left">
+            <span class="section-label">Now</span>
+            <h2 class="now-title">What I'm currently into</h2>
+          </div>
+          <div class="now-card-right">
+            <ul class="now-list">
+              <li>
+                <span class="now-dot"></span>
+                <div>
+                  <strong>Platform engineering</strong> — thinking about what developer experience actually means when your "developer" is also the on-call engineer at 3am.
+                </div>
+              </li>
+              <li>
+                <span class="now-dot"></span>
+                <div>
+                  <strong>Writing more deliberately</strong> — trying to write one sharp piece a month instead of ten loose ones.
+                </div>
+              </li>
+              <li>
+                <span class="now-dot"></span>
+                <div>
+                  <strong>Reading</strong> — currently: <em>The Goal</em> by Goldratt, again. Different book every time.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section section--alt" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-left">
+            <span class="section-label">About</span>
+            <h2 class="about-title">How I think</h2>
+          </div>
+          <div class="about-right">
+            <p>
+              I'm a DevOps &amp; systems engineer at Inuitive, building the infrastructure behind
+              computer vision chips. Before that, I spent a few years learning that the most
+              interesting bugs are never where you look first.
+            </p>
+            <p>
+              My instinct is to understand systems at the level below where the problem appears.
+              Most issues that look like infrastructure problems are team problems. Most team
+              problems are communication problems. Most communication problems are incentive
+              problems. I try to find the right level.
+            </p>
+            <p>
+              I'm based in Tel-Aviv. I believe in small teams, direct feedback, and writing
+              down your reasoning — not just your conclusions.
+            </p>
+            <div class="about-links">
+              <a href="mailto:dor.lamesh@gmail.com" class="btn btn--primary">Get in touch</a>
+              <a href="https://github.com/dorlamesh" class="btn btn--ghost" target="_blank" rel="noopener">GitHub</a>
+              <a href="https://linkedin.com/in/dorlamesh" class="btn btn--ghost" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-name">Dor Lamesh</span>
+        <span class="footer-copy">Built simply. Thinking openly.</span>
+        <a href="mailto:dor.lamesh@gmail.com" class="footer-email">dor.lamesh@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
