@@ -1,70 +1,32 @@
-// ─── NAV SCROLL EFFECT ──────────────────────────────────────────
-const nav = document.getElementById('nav');
-let lastScroll = 0;
+// ─── THEME TOGGLE ────────────────────────────────────────────────
+const html   = document.documentElement;
+const toggle = document.getElementById('themeToggle');
 
-window.addEventListener('scroll', () => {
-  const y = window.scrollY;
-  nav.style.borderBottomColor = y > 20
-    ? 'rgba(255,255,255,0.1)'
-    : 'rgba(255,255,255,0.07)';
-  lastScroll = y;
-}, { passive: true });
+// Persist preference
+const saved = localStorage.getItem('theme');
+if (saved) html.setAttribute('data-theme', saved);
 
-// ─── MOBILE MENU ────────────────────────────────────────────────
-const menuBtn    = document.getElementById('menuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-
-menuBtn.addEventListener('click', () => {
-  const open = mobileMenu.classList.toggle('open');
-  menuBtn.classList.toggle('open', open);
-  document.body.style.overflow = open ? 'hidden' : '';
+toggle.addEventListener('click', () => {
+  const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
 });
 
-document.querySelectorAll('.mobile-link').forEach(link => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.remove('open');
-    menuBtn.classList.remove('open');
-    document.body.style.overflow = '';
-  });
-});
-
-// ─── SCROLL REVEAL ──────────────────────────────────────────────
-const revealTargets = document.querySelectorAll(
-  '.project-card, .writing-card, .section-header, .now-card, .about-grid, .hero > .container > *'
-);
-
-revealTargets.forEach(el => el.classList.add('reveal'));
+// ─── NAV ACTIVE STATE ─────────────────────────────────────────────
+const sections = document.querySelectorAll('section[id]');
+const navLinks  = document.querySelectorAll('.nav-link');
 
 const observer = new IntersectionObserver(entries => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      // Stagger siblings slightly
-      const siblings = [...entry.target.parentElement.children];
-      const idx = siblings.indexOf(entry.target);
-      setTimeout(() => {
-        entry.target.classList.add('visible');
-      }, idx * 60);
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-
-revealTargets.forEach(el => observer.observe(el));
-
-// ─── SMOOTH NAV ACTIVE STATE ─────────────────────────────────────
-const sections = document.querySelectorAll('section[id]');
-const navLinks  = document.querySelectorAll('.nav-links a:not(.nav-cta)');
-
-const sectionObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       const id = entry.target.id;
       navLinks.forEach(link => {
-        const active = link.getAttribute('href') === `#${id}`;
-        link.style.color = active ? 'var(--text)' : '';
+        link.style.color = link.getAttribute('href') === `#${id}`
+          ? 'var(--text)'
+          : '';
       });
     }
   });
-}, { threshold: 0.4 });
+}, { threshold: 0.5 });
 
-sections.forEach(s => sectionObserver.observe(s));
+sections.forEach(s => observer.observe(s));
