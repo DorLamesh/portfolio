@@ -2,8 +2,8 @@
 const html   = document.documentElement;
 const toggle = document.getElementById('themeToggle');
 
-const saved = localStorage.getItem('theme');
-if (saved) html.setAttribute('data-theme', saved);
+const saved = localStorage.getItem('theme') || 'grey';
+html.setAttribute('data-theme', saved);
 
 const themeOrder = ['dark', 'grey', 'light'];
 
@@ -16,7 +16,7 @@ toggle.addEventListener('click', () => {
 });
 
 // ─── SECTION NAVIGATION ───────────────────────────────────────────
-const pageIds  = ['home', 'projects', 'writing', 'about'];
+const pageIds  = ['home', 'about', 'projects', 'writing'];
 const navLinks = document.querySelectorAll('.nav-link, .nav-name');
 
 function showSection(id) {
