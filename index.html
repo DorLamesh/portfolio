@@ -95,37 +95,56 @@
 
         <div class="entry">
           <div class="entry-meta">
-            <span class="entry-year">2022</span>
-            <span class="entry-tag">Migration</span>
+            <span class="entry-year">2026</span>
+            <span class="entry-tag">Tooling</span>
           </div>
           <div class="entry-body">
-            <h3 class="entry-title">SVN → Git migration at Inuitive</h3>
+            <h3 class="entry-title"><a href="https://github.com/DorLamesh/dotfiles" target="_blank" rel="noopener">dotfiles — cross-platform machine setup template ↗</a></h3>
             <p class="entry-desc">
-              Led the full SCM migration from SVN to Git across the org — preserving history,
-              handling large binary assets with Git LFS, and splitting monolithic repositories
-              into subdirectories. Wrote the internal migration guide that got the whole team
-              across with minimal disruption.
+              A personal dotfiles template for macOS, Linux, and Windows. One
+              <code>make install</code> symlinks config files, installs packages via Homebrew,
+              apt, or winget, and gets a new machine to a consistent environment fast.
             </p>
             <div class="entry-stack">
-              <span>Git</span><span>git-filter-repo</span><span>Git LFS</span><span>SVN</span>
+              <span>Makefile</span><span>Bash</span><span>Homebrew</span><span>macOS</span><span>Linux</span><span>Windows</span>
             </div>
           </div>
         </div>
 
         <div class="entry">
           <div class="entry-meta">
-            <span class="entry-year">2023</span>
-            <span class="entry-tag">Build systems</span>
+            <span class="entry-year">2026</span>
+            <span class="entry-tag">Side project</span>
           </div>
           <div class="entry-body">
-            <h3 class="entry-title">Build system overhaul — CMake + Conan</h3>
+            <h3 class="entry-title">shldi — YouTube summarizer Chrome extension <span style="font-size:0.75em;opacity:0.5;font-weight:400">(before publishing)</span></h3>
             <p class="entry-desc">
-              Migrated Visual Studio solutions and Ninja builds to CMake, and introduced
-              Conan as the C/C++ package manager. The result: reproducible builds, consistent
-              dependency versions across machines, and a packaging workflow that scales.
+              A Chrome extension that summarizes any YouTube video into bullet points — hover
+              any YouTube link on any page and get an AI-powered summary without opening the
+              video. Built with a Node.js backend on AWS Lambda, Google Auth via Cognito,
+              MongoDB Atlas for users, and a landing page with a freemium pricing model.
             </p>
             <div class="entry-stack">
-              <span>CMake</span><span>Conan</span><span>C/C++</span><span>Ninja</span><span>Visual Studio</span>
+              <span>Chrome Extension</span><span>Node.js</span><span>AWS Lambda</span><span>MongoDB</span><span>Google OAuth</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-meta">
+            <span class="entry-year">2024</span>
+            <span class="entry-tag">DevEx</span>
+          </div>
+          <div class="entry-body">
+            <h3 class="entry-title">Internal DevEx tooling + Debian PPA on AWS</h3>
+            <p class="entry-desc">
+              Designed and shipped Python-based developer experience tools with lightweight
+              UIs and REST APIs, cutting manual steps for the engineering team. Also created
+              and deployed a Debian PPA repository on AWS to distribute internal packages
+              cleanly across environments.
+            </p>
+            <div class="entry-stack">
+              <span>Python</span><span>AWS S3</span><span>AWS EC2</span><span>Debian</span><span>REST API</span>
             </div>
           </div>
         </div>
@@ -151,19 +170,37 @@
 
         <div class="entry">
           <div class="entry-meta">
-            <span class="entry-year">2024</span>
-            <span class="entry-tag">DevEx</span>
+            <span class="entry-year">2023</span>
+            <span class="entry-tag">Build systems</span>
           </div>
           <div class="entry-body">
-            <h3 class="entry-title">Internal DevEx tooling + Debian PPA on AWS</h3>
+            <h3 class="entry-title">Build system overhaul — CMake + Conan</h3>
             <p class="entry-desc">
-              Designed and shipped Python-based developer experience tools with lightweight
-              UIs and REST APIs, cutting manual steps for the engineering team. Also created
-              and deployed a Debian PPA repository on AWS to distribute internal packages
-              cleanly across environments.
+              Migrated Visual Studio solutions and Ninja builds to CMake, and introduced
+              Conan as the C/C++ package manager. The result: reproducible builds, consistent
+              dependency versions across machines, and a packaging workflow that scales.
             </p>
             <div class="entry-stack">
-              <span>Python</span><span>AWS S3</span><span>AWS EC2</span><span>Debian</span><span>REST API</span>
+              <span>CMake</span><span>Conan</span><span>C/C++</span><span>Ninja</span><span>Visual Studio</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-meta">
+            <span class="entry-year">2022</span>
+            <span class="entry-tag">Migration</span>
+          </div>
+          <div class="entry-body">
+            <h3 class="entry-title">SVN → Git migration at Inuitive</h3>
+            <p class="entry-desc">
+              Led the full SCM migration from SVN to Git across the org — preserving history,
+              handling large binary assets with Git LFS, and splitting monolithic repositories
+              into subdirectories. Wrote the internal migration guide that got the whole team
+              across with minimal disruption.
+            </p>
+            <div class="entry-stack">
+              <span>Git</span><span>git-filter-repo</span><span>Git LFS</span><span>SVN</span>
             </div>
           </div>
         </div>
@@ -183,7 +220,7 @@
           </div>
           <div class="entry-body">
             <h3 class="entry-title">
-              <a href="https://medium.com/@lameshdor/i-have-more-than-one-machine-but-i-only-want-one-environment-aab267a4fa3f" target="_blank" rel="noopener">I have more than one machine, but I only want one environment ↗</a>
+              <a href="https://medium.com/@lameshdor/i-have-more-than-one-machine-but-i-only-want-one-environment-aab267a4fa3f" target="_blank" rel="noopener">Few machines, but only one environment ↗</a>
             </h3>
             <p class="entry-desc">
               On keeping a consistent dev environment across multiple machines — tools,
